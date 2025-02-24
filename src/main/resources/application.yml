@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: photo-serv
+
+server:
+  port: 8080
+
+minio:
+  endpoint: https://play.min.io
+  accessKey: rD2sFvu4GpHUhhFYQmYt
+  secretKey: QGTYAlS7pLO2b9VZbdM8Hk48HqwMh7SVYhJ7pT1Q
+  bucket: zjq-photo
+
+logging:
+  level:
+    root: INFO
+    org.jiaqi.photoserv: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/photo-serv.log
+
+#限制每秒最多一次请求
+resilience4j.ratelimiter:
+  instances:
+    getPhotos:
+      limitForPeriod: 5
+      limitRefreshPeriod: PT1S
+      timeoutDuration: PT1S
+
+photo:
+  upload:
+    max-size: 10485760  # 最大文件大小（10MB）
+    allowed-types: image/jpeg,image/png,image/gif  # 允许的文件类型
