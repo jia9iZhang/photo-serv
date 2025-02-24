@@ -6,10 +6,11 @@ server:
   port: 8080
 
 minio:
-  endpoint: https://play.min.io
-  accessKey: rD2sFvu4GpHUhhFYQmYt
-  secretKey: QGTYAlS7pLO2b9VZbdM8Hk48HqwMh7SVYhJ7pT1Q
-  bucket: zjq-photo
+  endpoint: http://127.0.0.1:9000
+  accessKey: nvm86ZedhgftVedpv0d5
+  secretKey: LOkv0YZ1YSHk7gk2UtweZXKy3sY3hJ3fJhB6TqNS
+  bucket: zjq-photos
+  folderName: LightRoom 后期/
 
 logging:
   level:

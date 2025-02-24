@@ -26,6 +26,9 @@ public class MinioService {
     @Value("${minio.endpoint}")
     private String endpoint;
 
+    @Value("${minio.folderName}")
+    private String folderName;
+
     public String uploadFile(MultipartFile file) throws Exception {
         String fileName = UUID.randomUUID().toString() + getFileExtension(file.getOriginalFilename());
         log.debug("开始上传文件到MinIO, fileName: {}", fileName);
@@ -51,6 +54,7 @@ public class MinioService {
         Iterable<Result<Item>> results = minioClient.listObjects(
                 ListObjectsArgs.builder()
                         .bucket(bucketName)
+                        .prefix(folderName)
                         .build());
         
         for (Result<Item> result : results) {
