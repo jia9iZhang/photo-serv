@@ -42,4 +42,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/your-repo-name:${{ github.sha }}
+        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/photo-serv:${{ github.sha }}
