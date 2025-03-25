@@ -54,7 +54,7 @@ public class MinioService {
         Iterable<Result<Item>> results = minioClient.listObjects(
                 ListObjectsArgs.builder()
                         .bucket(bucketName)
-                        .prefix(folderName)
+                        //.prefix(folderName)
                         .build());
         
         for (Result<Item> result : results) {

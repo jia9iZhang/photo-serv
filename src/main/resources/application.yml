@@ -3,14 +3,14 @@ spring:
     name: photo-serv
 
 server:
-  port: 8080
+  port: 25239
 
 minio:
   endpoint: http://127.0.0.1:9000
-  accessKey: nvm86ZedhgftVedpv0d5
-  secretKey: LOkv0YZ1YSHk7gk2UtweZXKy3sY3hJ3fJhB6TqNS
-  bucket: zjq-photos
-  folderName: LightRoom 后期/
+  accessKey: uZrgL4G9zYLGv5Z6FddS
+  secretKey: dekftzEPkZYcxCiG105eqYRMuBBzsu5UWzZEyVJV
+  bucket: photo-serv
+#  folderName: LightRoom/
 
 logging:
   level:
