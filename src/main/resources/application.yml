@@ -6,7 +6,7 @@ server:
   port: 25239
 
 minio:
-  endpoint: http://127.0.0.1:9000
+  endpoint: http://minio:9000
   accessKey: uZrgL4G9zYLGv5Z6FddS
   secretKey: dekftzEPkZYcxCiG105eqYRMuBBzsu5UWzZEyVJV
   bucket: photo-serv
