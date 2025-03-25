@@ -26,8 +26,8 @@ public class MinioService {
     @Value("${minio.endpoint}")
     private String endpoint;
 
-    @Value("${minio.folderName}")
-    private String folderName;
+    //@Value("${minio.folderName}")
+    //private String folderName;
 
     public String uploadFile(MultipartFile file) throws Exception {
         String fileName = UUID.randomUUID().toString() + getFileExtension(file.getOriginalFilename());
