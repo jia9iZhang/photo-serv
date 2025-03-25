@@ -9,7 +9,7 @@ WORKDIR /app
 COPY target/photo-serv-0.0.1-SNAPSHOT.jar app.jar
 
 # 暴露端口（根据你的应用程序调整）
-EXPOSE 8080
+EXPOSE 25239
 
 # 启动应用程序
 ENTRYPOINT ["java", "-jar", "app.jar"]
