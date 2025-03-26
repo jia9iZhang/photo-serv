@@ -6,9 +6,9 @@ server:
   port: 25239
 
 minio:
-  endpoint: http://minio:9000
-  accessKey: uZrgL4G9zYLGv5Z6FddS
-  secretKey: dekftzEPkZYcxCiG105eqYRMuBBzsu5UWzZEyVJV
+  endpoint: http://120.79.201.42:25234
+  accessKey: iMM6N38kiYH06VIZtyWM
+  secretKey: nXPJSibCqpmW3gYMMjy6xvBGuZbLg9oJgVrNMEQL
   bucket: photo-serv
 #  folderName: LightRoom/
 
